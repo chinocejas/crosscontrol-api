@@ -3,14 +3,14 @@
 var mongoose = require('mongoose');
 var schema = mongoose.Schema;
 
-var EjericioSchema = schema({
+var EjercicioSchema = schema({
     name: String,
     description: String,
-    date: Number,
-    rm: String,
+    date: Date,
+    rm: Number,
     medida: String,
     user: {type: schema.ObjectId, ref:'User'}
 
 });
 
-module.exports = mongoose.model('Ejercicio',EjericioSchema);  
+module.exports = mongoose.model('Ejercicio',EjercicioSchema);  

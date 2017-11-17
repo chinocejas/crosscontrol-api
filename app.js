@@ -8,6 +8,7 @@ var app = express();
 //cargarRutas
 var user_routes=require('./routes/user');
 var artist_routes=require('./routes/artist');
+var ejercicio_routes=require('./routes/ejercicio');
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
@@ -25,6 +26,7 @@ app.use((req,res,next)=>{
 //rutas base
 app.use('/api', user_routes);
 app.use('/api', artist_routes);
+app.use('/api', ejercicio_routes);
 
 
 
